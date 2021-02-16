@@ -4,6 +4,9 @@
   top: 0;
   left: 0;
   min-height: 100vh;
-  background-color: green;
+  background-color: #BBB;
   transition: all 0.3s ease-in-out;
+  &.no-sidebar {
+    left: -250px;
+  }
 }

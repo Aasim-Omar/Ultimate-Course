@@ -6,8 +6,10 @@
   .content-area {
     width: calc(100% - 250px);
     float: $right;
-    background-color: blue;
     will-change: width;
     transition: all 0.3s ease-in-out;
+    &.no-sidebar {
+      width: 100%;
+    }
   }
 }

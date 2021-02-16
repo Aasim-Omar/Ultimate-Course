@@ -11,5 +11,7 @@ html(lang="en")
     .page.home-page
       include pug/layout/sidebar
       .content-area
-        h1 #{pageTitle} Content con
+        include pug/layout/header
+        .content
+          h1 #{pageTitle}
     script(src="js/main-min.js")
