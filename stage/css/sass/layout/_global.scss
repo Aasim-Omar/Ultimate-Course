@@ -1,0 +1,13 @@
+.page {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #DDD;
+  overflow: hidden;
+  .content-area {
+    width: calc(100% - 250px);
+    float: $right;
+    background-color: blue;
+    will-change: width;
+    transition: all 0.3s ease-in-out;
+  }
+}
