@@ -1,12 +1,68 @@
+// Sidebar Section
 .sidebar {
-  width: 250px;
+  width: 300px;
   position: fixed;
   top: 0;
   left: 0;
   min-height: 100vh;
-  background-color: #BBB;
+  background-color: $grayColor;
+  color: #fff;
+  padding: 0 15px;
   transition: all 0.3s ease-in-out;
   &.no-sidebar {
-    left: -250px;
+    left: -300px;
+  }
+  .logo {
+    text-align: center;
+  }
+  .links {
+    li a {
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 10px;
+      transition: 0.3s;
+      color: #fff;
+    }
+    > li > a {
+      padding-left: 20px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 10px;
+        height: 10px;
+        border: 2px solid #fff;
+        border-radius: 50%;
+      }
+      &:hover {
+        padding-left: 25px;
+      }
+      i {
+        margin-left: 1rem;
+        transition: 0.5s;
+        &.rotate {
+          transform: rotate(90deg);
+        }
+      }
+    }
+    .sub-links {
+      transition: 0.5s;
+      overflow: hidden;
+      will-change: height;
+      height: 0;
+      li a {
+        font-size: 0.9rem;
+        color: #AAA;
+        border-left: 2px solid #666;
+        transform: translateX(10px);
+        &:hover {
+          border-color: #FFF;
+          color: #EEE;
+        }
+      }
+    }
   }
 }
