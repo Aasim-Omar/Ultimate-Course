@@ -29,6 +29,15 @@ document.querySelectorAll(".drop-down").forEach(function (drop) {
 });
 
 
+// Notifaictions Toggle
+document.querySelector(".noti-toggle").addEventListener("click", function() {
+  if (this.nextElementSibling.clientHeight) {
+    this.nextElementSibling.style.height = 0;
+  } else {
+    this.nextElementSibling.style.height = `${this.nextElementSibling.scrollHeight}px`;
+  }
+});
+
 
 
 

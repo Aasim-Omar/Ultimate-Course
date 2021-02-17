@@ -1,5 +1,62 @@
 .header {
-  .toggle-sidebar {
+  display: flex;
+  .header-icons {
+    width: 40px;
+    height: 40px;
+    background-color: #ccc;
+    display: flex;
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    border-radius: 50%;
+    color: #333;
     cursor: pointer;
+  }
+  .notification {
+    position: relative;
+    .noti-links {
+      background-color: #AAA;
+      min-width: 350px;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      transition: 0.5s;
+      overflow: hidden;
+      height: 0;
+      .noti-label,
+      .all-noti {
+        padding: 20px;
+      }
+      .noti-label {
+        background-color: $grayColor;
+        color: #FFF;
+        display: flex;
+        justify-content: space-between;
+      }
+      .all-noti {
+        text-align: center;
+        font-size: 0.9rem;
+        color: #2375f3;
+        cursor: pointer;
+      }
+      li a {
+        display: block;
+        color: black;
+        padding: 15px;
+        &::before {
+          content: "";
+          position: absolute;
+          top: -20px;
+          left: 30px;
+          border-width: 10px;
+          border-style: solid;
+          border-color: transparent transparent $grayColor transparent;
+        }
+        &:hover {
+          background-color: brown;
+        }
+      }
+    }
   }
 }

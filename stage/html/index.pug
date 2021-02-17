@@ -10,8 +10,9 @@ html(lang="en")
       include pug/layout/sidebar
       .content-area
         include pug/layout/header
+        .container
+          .content
+            h1 #{pageTitle}
+            p السماء لا تمطر غير الحب مرحبا بكم في هذه التجربة المرحة
         
-        .content
-          h1 #{pageTitle}
-          p السماء لا تمطر غير الحب مرحبا بكم في هذه التجربة المرحة
     script(src="js/main-min.js")
