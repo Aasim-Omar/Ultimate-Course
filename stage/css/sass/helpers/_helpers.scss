@@ -1,0 +1,20 @@
+// Main Container
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  @media ($xs) {
+    width: 100%;
+  }
+  @media ($sm) {
+    width: 540px;
+  }
+  @media ($md) {
+    width: 720px;
+  }
+  @media ($lg) {
+    width: 960px;
+  }
+  @media ($xl) {
+    width: 1000px;
+  }
+}
