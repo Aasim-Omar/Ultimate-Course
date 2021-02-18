@@ -45,6 +45,12 @@ document.querySelector(".toggle-full-screen").addEventListener("click", function
   this.classList.toggle("full-screen");
 });
 
+// Toggle Settings
+document.querySelector(".toggle-settings").addEventListener("click", function() {
+  this.firstElementChild.classList.toggle("fa-spin");
+  this.parentElement.classList.toggle("hide-settings");
+});
+
 //Full Screen Functios
 var elem = document.documentElement;
 function openFullscreen() {
