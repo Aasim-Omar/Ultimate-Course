@@ -1,0 +1,19 @@
+$themes: (
+  green-theme: (color: #27ae60),
+  red-theme: (color: #c0392b),
+  blue-theme: (color: #2980b9),
+  orange-theme: (color: #d35400)
+);
+
+@each $theme, $map in $themes {
+  .#{$theme} {
+    .option-title {
+      transition: 0.3s;
+      color: map-get($map, color);
+    }
+    .content-area .content h1 {
+      transition: 0.3s;
+      color: map-get($map, color);
+    }
+  }
+}

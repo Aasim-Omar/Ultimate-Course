@@ -45,6 +45,25 @@ document.querySelector(".toggle-full-screen").addEventListener("click", function
   this.classList.toggle("full-screen");
 });
 
+// Toggle Options Colors
+var allThemes = [];
+let allThemesBullets = document.querySelectorAll(".colors-option li");
+document.querySelector(".colors-option li").classList.add("active");
+allThemesBullets.forEach(option => {
+  allThemes.push(option.dataset.theme);
+});
+
+allThemesBullets.forEach(color => {
+  color.addEventListener("click", function() {
+    allThemesBullets.forEach(item => {
+      item.classList.remove("active");
+    });
+    this.classList.add("active");
+    document.body.classList.remove(...allThemes);
+    document.body.classList.add(this.dataset.theme);
+  });
+});
+
 // Toggle Settings
 document.querySelector(".toggle-settings").addEventListener("click", function() {
   this.firstElementChild.classList.toggle("fa-spin");

@@ -25,9 +25,26 @@
     cursor: pointer;
   }
   .settings-content {
-    .option-box {
-      .option-title {
-
+    .colors-option {
+      ul {
+        li {
+          width: 30px;
+          height: 30px;
+          display: inline-block;
+          margin: 0 5px;
+          border-radius: 50%;
+          transition: 0.3s;
+          cursor: pointer;
+          &.active {
+            border: 1px solid #222;
+          }
+        }
+        $colors: #666,#27ae60, #c0392b, #2980b9, #d35400;
+        @for $i from 1 through length($colors) {
+          li:nth-child(#{$i}) {
+            background-color: nth($colors, $i);
+          }
+        } 
       }
     }
   }

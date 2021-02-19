@@ -1,9 +1,13 @@
 .settings-box.hide-settings
   .toggle-settings
     i.fa.fa-gear.fa-lg
-  .srttings-content 
-    .option-box
+  .settings-content 
+    .option-box.colors-option
       h4.option-title Color Options
+      - var themes = ["defaulte-theme", "green-theme", "red-theme", "blue-theme", "orange-theme"];
+      ul 
+        each theme in themes 
+          li(data-theme=theme)
     .option-box
       h4.option-title Fonts Options
     .option-box 
